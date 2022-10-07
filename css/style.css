@@ -80,6 +80,7 @@ body {
     .grid-container  {
       grid-template-areas: 
         'header header header header header header' 
+        'nav nav nav nav nav nav'
         'izq izq izq izq izq izq' 
         'med med med med med med' 
         'der der der der der der' 
