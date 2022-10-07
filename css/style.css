@@ -1,0 +1,81 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: rgb(185, 226, 191);
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'izq izq med med der der' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .izq,
+  .med,
+  .der {
+    padding: 10px;
+    height:max-content /* Should be removed. Only for demonstration */
+  }
+  
+  /* Style the left column */
+  .izq {
+    grid-area: izq;
+  }
+  
+  /* Style the middle column */
+  .med {
+    grid-area: med;
+  }
+  
+  /* Style the right column */
+  .der {
+    grid-area: der;
+  }
+  
+  /* Style the footer */
+  .footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'izq izq izq izq izq izq' 
+        'med med med med med med' 
+        'der der der der der der' 
+        'footer footer footer footer footer footer';
+    }
+  }
