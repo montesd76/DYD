@@ -18,7 +18,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
   
-  /* Style the header */
+
   .header {
     grid-area: header;
     background-color: #f1f1f1;
@@ -27,39 +27,46 @@ body {
     font-size: 35px;
   }
   
-  /* The grid container */
+  .nav {
+    grid-area:nav;
+    background-color:rgb(228, 13, 13);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+
   .grid-container {
     display: grid;
     grid-template-areas: 
       'header header header header header header' 
+      'nav nav nav nav nav nav'
       'izq izq med med der der' 
       'footer footer footer footer footer footer';
-    /* grid-column-gap: 10px; - if you want gap between the columns */
-  } 
+  }
   
   .izq,
   .med,
   .der {
     padding: 10px;
-    height:max-content /* Should be removed. Only for demonstration */
+    height:max-content 
   }
   
-  /* Style the left column */
+
   .izq {
     grid-area: izq;
   }
   
-  /* Style the middle column */
+
   .med {
     grid-area: med;
   }
   
-  /* Style the right column */
+
   .der {
     grid-area: der;
   }
   
-  /* Style the footer */
+
   .footer {
     grid-area: footer;
     background-color: #f1f1f1;
@@ -68,7 +75,7 @@ body {
     padding: 40px;
   }
   
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  /*Responsive */
   @media (max-width: 600px) {
     .grid-container  {
       grid-template-areas: 
