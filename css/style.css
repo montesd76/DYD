@@ -41,6 +41,9 @@ body {
 li {
   display: inline-block;
 }
+  a:hover{
+  color: rgb(30, 233, 12);
+}
 
 a {
   text-decoration: none;
