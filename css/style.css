@@ -2,42 +2,65 @@
   border: 0;
   padding: 0;
   margin: 0;
-}
-
-h2 {
-  padding: 2px;
-  font-size: 3.0rem;
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgb(185, 226, 191);
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Pacifico', cursive;
 }
 
-* {
-  box-sizing: border-box;
+.logo {
+  grid-area: logo;
+  background-color: #43ce4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border: 20px; ;
+  
 }
 
+.imagenlogo {
+  height: 11vw;
+  width: 11vw;
+ 
+ object-fit: contain;
+ }
 
 .header {
   grid-area: header;
   background-color: #43ce4f;
-  padding: 10px;
-  text-align: center;
-  /*font-size: 35px;*/
-  font-size: 2.5rem;
-  font-family: 'Pacifico', cursive;
-  /*font google*/
+  padding: 5px;
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
 
+}
+h2 {
+  font-size: 1.7vw;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+.iconos {
+  grid-area: iconos;
+  padding: 10px;
+  background-color: #43ce4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav {
   grid-area: nav;
   background-color: rgb(6, 112, 33);
   display: inline-block;
-  padding: 10px;
+  padding: 2px;
   text-align: center;
   font-family: 'Pacifico', cursive;
   /*font google*/
@@ -45,6 +68,10 @@ body {
 
 li {
   display: inline-block;
+  margin: 5px;
+  padding: 2px;
+  width: 160px;
+  text-align: center;
 }
 
 a:hover {
@@ -53,16 +80,17 @@ a:hover {
 
 a {
   text-decoration: none;
-  font-size:auto;
+  font-size: 1.6vw;
   color: #FFFFFF;
-  margin: 50px;
+  margin: 40px;
+  
 
 }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
+    'logo header header header header iconos'
     'nav nav nav nav nav nav'
     'izq izq med med der der'
     'footer footer footer footer footer footer';
@@ -71,7 +99,7 @@ a {
 .izq,
 .med,
 .der {
-  padding: 10px;
+  padding: 5px;
   height: max-content
 }
 
@@ -79,21 +107,21 @@ a {
 .izq {
   grid-area: izq;
   text-align: center;
-  height: 400px;
+
 }
 
 
 .med {
   grid-area: med;
   text-align: center;
-  height: 400px;
+
 }
 
 
 .der {
   grid-area: der;
   text-align: center;
-  height: 400px;
+
 }
 
 
@@ -103,14 +131,17 @@ a {
   padding: 10px;
   text-align: center;
   padding: 40px;
-  height:max-content;
+  height: max-content;
 }
 
 /*Responsive */
 @media (max-width: 600px) {
   .grid-container {
     grid-template-areas:
+
+      'logo logo logo logo logo logo'
       'header header header header header header'
+      'iconos iconos iconos iconos iconos iconos'
       'nav nav nav nav nav nav'
       'izq izq izq izq izq izq'
       'med med med med med med'
@@ -118,4 +149,3 @@ a {
       'footer footer footer footer footer footer';
   }
 }
-
