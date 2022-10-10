@@ -15,20 +15,17 @@ body {
 .logo {
   grid-area: logo;
   background-color: #43ce4f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 2px;
-  border: 20px; ;
-  
+  border: 2px; 
+  text-align: center;
+   
 }
 
 .imagenlogo {
-  height: 140px;
-  width: 140px;
+  height: auto;
+  width: auto;
  
- object-fit: contain;
- }
+   }
 
 .header {
   grid-area: header;
@@ -37,25 +34,24 @@ body {
   text-align:center;
   font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
+  
 
 }
 h2 {
   font: size 16px;
   font-family: 'Roboto', sans-serif;
-
+  text-align:center;
 }
 
 p {
   font-size: 13px;
-}
+  }
 
 .iconos {
   grid-area: iconos;
   padding: 10px;
   background-color: #43ce4f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .nav {
@@ -72,7 +68,7 @@ li {
   display: inline-block;
   margin: 5px;
   padding: 2px;
-  width: 160px;
+  width: 40vh;
   text-align: center;
 }
 
